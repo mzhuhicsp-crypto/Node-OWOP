@@ -60,7 +60,7 @@ var server = http.createServer(function(req, res) {
 		file = "index.html"
 	}
 	
-	res.write(fileData[file], "binary");
+	var ext = file.split(".").pop(); var types = {"html":"text/html","js":"application/javascript","css":"text/css","png":"image/png","ico":"image/x-icon","woff":"font/woff","woff2":"font/woff2"}; res.writeHead(200, {"Content-Type": types[ext] || "text/plain"}); res.write(fileData[file], "binary");
 	res.end();
 })
 server.listen(9001, function() {

@@ -1,6 +1,6 @@
 {
-	"adminlogin": "your admin pass",
-	"modlogin": "your mod pass",
+	"adminlogin": "asd",
+	"modlogin": "asd",
 	"_comment": "0 means disabled and btw you can remove all comments",
 	"maxConnectionsPerIp": 3,
 	"maxConnections": 500,

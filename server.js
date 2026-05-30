@@ -60,7 +60,7 @@ loadScripts()
 
 function createWSServer() {
   wss = new ws.Server({
-    port: config.port
+    port: process.env.PORT || config.port
   });
   wss.on("connection", async function(ws, req) {
     if (terminatedSocketServer) {

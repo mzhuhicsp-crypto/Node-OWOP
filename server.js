@@ -66,7 +66,6 @@ function createWSServer() {
       ws.send(config.closeMsg)
       ws.close();
     }
-nano server.js
     let ip = (req.headers['x-forwarded-for'] || req.connection.remoteAddress).split(",")[0].replace('::ffff:', '');
 
     if (server.bansManager.checkIfIsBanned(ip)) {

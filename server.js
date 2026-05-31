@@ -59,14 +59,14 @@ loadScripts()
 
 
 function createWSServer() {
-  wss = new ws.Server({
-    port: process.env.PORT || config.port
+  wss = new ws.Server({ server: require("./client.js").server,
   });
   wss.on("connection", async function(ws, req) {
     if (terminatedSocketServer) {
       ws.send(config.closeMsg)
       ws.close();
     }
+nano server.js
     let ip = (req.headers['x-forwarded-for'] || req.connection.remoteAddress).split(",")[0].replace('::ffff:', '');
 
     if (server.bansManager.checkIfIsBanned(ip)) {

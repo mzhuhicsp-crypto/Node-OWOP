@@ -1,6 +1,6 @@
 {
-	"adminlogin": "asd",
-	"modlogin": "asd",
+	"adminlogin": "iswearimnothackerandiswearthaticsphasapprovedthis",
+	"modlogin": "iswearimnothackerandiswearthaticsphasapprovedmodaccessforme",
 	"_comment": "0 means disabled and btw you can remove all comments",
 	"maxConnectionsPerIp": 3,
 	"maxConnections": 500,
@@ -12,7 +12,7 @@
 		"limit": 1000
 	},
 	"port": 8000,
-	"maxNickLength": 12,
+	"maxNickLength": 4096,
 	"messages": {
 		"_comment": "change 'Nobody likes YOU'",
 		"unbanMessage": "https://discord.gg/DTGAq4b",
@@ -22,9 +22,9 @@
 	"bucket": {
 		"pixel": {
 			"none": [0, 1],
-			"user": [48, 4],
-			"mod": [32, 2],
-			"admin": [32, 0]
+			"user": [200, 1],
+			"mod": [400, 1],
+			"admin": [600, 1]
 		},
 		"chat": {
 			"none": [4, 6],

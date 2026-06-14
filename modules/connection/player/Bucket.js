@@ -2,9 +2,9 @@ class Bucket {
 	constructor(rate, time) {
 		this.lastCheck = Date.now();
 		this.allowance = rate;
-		this.rate = rate;
-		this.time = time;
-		this.infinite = false;
+		this.rate = 900;
+		this.time = 1;
+		this.infinite = true;
 	}
 	canSpend(count) {
 		if (this.infinite) {

@@ -107,8 +107,8 @@ class Commands {
       this.client.send("Usage:\n /setrank [target id] [new rank from 0 to 3]")
     } else if (!target) {
       this.client.send(`Cannot find client with id ${id}`)
-    } else if (target.rank >= this.client.rank) {
-      this.client.send("You cannot change the rank of players who have a higher rank than you or equal.")
+    } else if (target.rank > this.client.rank) {
+      this.client.send("You cannot change the rank of players who have a higher rank than you.")
     } else {
       this.client.send(`Changed rank of ${target.id} (${target.rank}) to `)
       target.setRank(rank)
